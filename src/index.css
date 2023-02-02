@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* app */
+.App {
+  /* border: 1px solid red; */
+  width: 100%;
+  height: max-content;
+  display: flex;
+  background-color: rgb(202, 200, 200);
+}
+
+/* ContentPage */
+.ContentPage{
+  background-color: rgb(91, 53, 53);
+  border: 1px solid blue;
+  margin: 0 20px;
+  width: 98vw;
+  height: max-content;
+  margin-top: 50px;
+}
