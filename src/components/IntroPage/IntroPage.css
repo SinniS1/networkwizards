@@ -1,11 +1,11 @@
 .IntroPage {
     /* border: 1px solid red; */
-    height: 70vh;
+    /* height: 70vh; */
     width: 100%;
     display: grid;
     place-items: center;
     position: relative;
-    padding-top: 100px;
+    padding: 100px 0;
 }
 
 .IntroContent {
@@ -26,15 +26,6 @@
     padding: 20px 0;
 }
 
-
-@media screen and (max-width: 800px) {
-    .IntroContent {
-        height: fit-content;
-        width: 100%;
-        margin: 10px 80px;
-    }
-}
-
 .heading {
     font-size: 2.0rem;
     text-align: center;
@@ -42,6 +33,7 @@
 
 .changeCourses {
     font-size: 1.5rem;
+    width: 220px;
 }
 
 .NetWiz {
@@ -71,20 +63,52 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 0.2s ease-in-out;
 }
 
 .box1 {
     transform: rotate(-20deg);
-    top: 250px;
-    left: 170px;
+    top: 150px;
+    left: 160px;
 }
 
 .box2 {
-    top: 120px;
+    top: 70px;
     transform: rotate(15deg);
 }
 
 .box3 {
     right: 150px;
-    transform: rotate(10deg);
+    transform: rotate(-20deg);
+}
+
+.box:hover {
+    transform: rotate(-5deg);
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+    .IntroContent {
+        height: fit-content;
+        width: 100%;
+        margin: 10px 25px;
+    }
+
+    .box1 {
+        transform: rotate(20deg);
+        top: calc(100% - 150px);
+        left: 70px;
+    }
+
+    .box2 {
+        top: 60px;
+        left: 20px;
+    }
+
+    .box3 {
+        top: 150px;
+        right: 10px;
+    }
 }

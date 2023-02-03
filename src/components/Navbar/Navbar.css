@@ -17,7 +17,7 @@
 
 
 .lists {
-    width: 40%;
+    width: 65vw;
     font-size: 15px;
     display: flex;
     flex-direction: row;
@@ -25,21 +25,16 @@
     justify-content: space-between;
     list-style: none;
     cursor: pointer;
-    /* transition: all 0.5s ease-in-out; */
-
+    color: purple;
 }
 
 .lists li:hover {
-    transition: all 0.5s ease;
-    color: #b97ad2;
-    font-size: 18px;
+    transition: all 0.2s ease;
     font-weight: bold;
-    text-shadow: 5px 5px 5px #b97ad2;
 }
 
 .lists li:active {
-    color: #9b59b6;
-    font-size: 16px;
+    color: #371ec4;
 }
 
 
