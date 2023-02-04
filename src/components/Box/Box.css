@@ -1,0 +1,45 @@
+/* Boxes */
+.box {
+    width: 90px;
+    height: 90px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    position: absolute;
+    z-index: -1;
+    padding: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.box1 {
+    transform: rotate(20deg);
+    top: 50px;
+    left: -10px;
+}
+
+.box2 {
+    top: calc(100% - 20px);
+    transform: rotate(10deg);
+}
+
+.box3 {
+    right: -10px;
+    top: -20px;
+    transform: rotate(-20deg);
+}
+
+.box:hover {
+    transform: rotate(-5deg);
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+.box:nth-child(odd)+.box1 {
+    transform: rotate(90deg);
+}
