@@ -1,4 +1,5 @@
 import React from 'react'
+import Cards from '../Cards/Cards'
 import IntroPage from '../IntroPage/IntroPage'
 const ContentPage = () => {
   return (
@@ -6,6 +7,13 @@ const ContentPage = () => {
     <div className='ContentPage'>
       <IntroPage />
       {/* div for next cards section */}
+      <div className="CardSection">
+        <Cards/>
+        <Cards/>
+        <Cards/>
+        <Cards/>
+        <Cards/>
+      </div>
     </div>
 
   )
