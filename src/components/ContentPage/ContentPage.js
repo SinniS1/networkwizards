@@ -5,7 +5,6 @@ const ContentPage = () => {
     // Content page will have all the boxes with the content in it
     <div className='ContentPage'>
       <IntroPage />
-      <IntroPage />
       {/* div for next cards section */}
     </div>
 

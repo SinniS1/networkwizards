@@ -1,43 +1,43 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import "./IntroPage.css"
 
 const IntroPage = () => {
-    const textDisplay = document.getElementById("text");
-    let i = 0;
-    let j = 0;
-    const phrase = ["Coding", "Programming", "Networking"]
-    let currentPhrase = []
-    let isDeleting = false;
-    function loop() {
-        if (textDisplay) {
-            textDisplay.innerHTML = currentPhrase.join("");
-        }
-        if (i < phrase.length) {
-            if (!isDeleting && j <= phrase[i].length) {
-                currentPhrase.push(phrase[i][j])
-                j++
+    const textDisplay = useRef(null);
+    const phrase = ["Coding", "Programming", "Networking"];
+
+    useEffect(() => {
+        let i = 0;
+        let j = 0;
+        let isDeleting = false;
+        let currentPhrase = [];
+        function loop() {
+            if (textDisplay.current) {
+                textDisplay.current.innerHTML = currentPhrase.join("");
             }
-            if (isDeleting && j <= phrase[i].length) {
-                currentPhrase.pop(phrase[i][j])
-                j--;
-            }
-            if (j === phrase[i].length) {
-                isDeleting = true;
-            }
-            if (isDeleting && j === 0) {
-                isDeleting = false;
-                currentPhrase = [];
-                i++;
-                if (i === phrase.length) {
-                    i = 0;
+            if (i < phrase.length) {
+                if (!isDeleting && j <= phrase[i].length) {
+                    currentPhrase.push(phrase[i][j]);
+                    j++;
+                }
+                if (isDeleting && j >= 0) {
+                    currentPhrase.splice(j, 1);
+                    j--;
+                }
+                if (j === phrase[i].length) {
+                    isDeleting = true;
+                }
+                if (isDeleting && j === -1) {
+                    isDeleting = false;
+                    j = 0;
+                    currentPhrase = [];
+                    i = (i + 1) % phrase.length;
                 }
             }
+            setTimeout(loop, 200);
         }
-        setTimeout(loop, 200)
-    }
-    useEffect(() => {
-        loop()
-    })
+        loop();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     return (
         <div className='IntroPage'>
@@ -45,7 +45,7 @@ const IntroPage = () => {
                 <div className="heading">Welcome to <span className='NetWiz'>Network Wizards</span></div>
                 <div className="changeContainer">
                     <div className="changeCourses">
-                        <span className='Learn'>Learn <span id='text' className='NetWiz'></span></span>
+                        <span className='Learn'>Learn <span id='text' ref={textDisplay} className='NetWiz'></span></span>
 
                     </div>
                 </div>
