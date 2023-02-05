@@ -5,14 +5,14 @@ const ContentPage = ({ darkMode }) => {
   return (
     // Content page will have all the boxes with the content in it
     <div className={`ContentPage ${darkMode ? "dark" : "light"}`}>
-      <IntroPage />
+      <IntroPage darkMode={darkMode} />
       {/* div for next cards section */}
       <div className="CardSection">
-        <Cards />
-        <Cards />
-        <Cards />
-        <Cards />
-        <Cards />
+        <Cards darkMode={darkMode} />
+        <Cards darkMode={darkMode} />
+        <Cards darkMode={darkMode} />
+        <Cards darkMode={darkMode} />
+        <Cards darkMode={darkMode} />
       </div>
     </div>
 

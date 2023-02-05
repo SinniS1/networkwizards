@@ -9,10 +9,8 @@
 .IntroContent {
     position: relative;
     z-index: 5;
-    background: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
+    /* backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px); */
     border-radius: 10px;
     max-width: fit-content;
     max-height: fit-content;
@@ -23,6 +21,16 @@
     align-items: center;
     justify-content: center;
     padding: 20px 0;
+}
+
+.darkIntroContent {
+    background: rgba(255, 255, 255, 0.50);
+    box-shadow: 5px 5px 15px 0 rgba(255, 255, 255, 0.20);
+}
+
+.lightIntroContent {
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.30);
 }
 
 .heading {
