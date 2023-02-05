@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import "./Navbar.css"
 const Navbar = ({ toggleDarkMode, darkMode }) => {
-  const [tglNav, setTglNav] = useState(false)
+  const [tglNav, setTglNav] = useState(true)
   const toggleNav = () => {
     setTglNav(tglNav => !tglNav)
   }
@@ -27,7 +27,7 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
         </li>
       </ul>
       <div className="switched">
-        <input type="checkbox" onClick={toggleNav}  />
+        <input type="checkbox" onClick={toggleNav} />
         <div>
           <span className="line-1"></span>
           <span className="line-2"></span>
