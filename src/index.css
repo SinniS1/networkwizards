@@ -15,6 +15,7 @@
   display: flex;
   background-color: rgb(202, 200, 200);
   overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* ContentPage */
@@ -22,6 +23,13 @@
   /* border: 1px solid blue; */
   width: 100vw;
   height: max-content;
+}
+
+.dark {
+  background-image: linear-gradient(-225deg, #10265e 0%, #31275e 48%, #332545 100%);
+}
+
+.light {
   background-image: linear-gradient(-225deg, #5271C4 0%, #B19FFF 48%, #ECA1FE 100%);
 }
 

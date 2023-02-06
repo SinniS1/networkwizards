@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import Box from '../Box/Box';
 import "./IntroPage.css"
 
-const IntroPage = () => {
+const IntroPage = ({ darkMode }) => {
     const textDisplay = useRef(null);
     const phrase = ["Coding", "Programming", "Networking"];
 
@@ -41,8 +41,8 @@ const IntroPage = () => {
     }, []);
 
     return (
-        <div className='IntroPage'>
-            <div className="IntroContent">
+        <div className={`IntroPage `}>
+            <div className={`IntroContent ${darkMode ? "darkIntroContent" : "lightIntroContent"}`}>
                 <div className="heading">Welcome to <span className='NetWiz'>Network Wizards</span></div>
                 <div className="changeContainer">
                     <div className="changeCourses">
