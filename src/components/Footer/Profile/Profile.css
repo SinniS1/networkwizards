@@ -1,0 +1,13 @@
+.Profile {
+    background-color: rgb(154, 154, 154);
+    width: 100%;
+    height: fit-content;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.Profile div{
+    border: 1px solid blue;
+    width: 100%;
+    height: 100%;
+}

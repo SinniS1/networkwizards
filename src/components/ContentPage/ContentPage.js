@@ -1,5 +1,6 @@
 import React from 'react'
 import Cards from '../Cards/Cards'
+import Footer from '../Footer/Footer'
 import IntroPage from '../IntroPage/IntroPage'
 const ContentPage = ({ darkMode }) => {
   return (
@@ -14,6 +15,7 @@ const ContentPage = ({ darkMode }) => {
         <Cards darkMode={darkMode} />
         <Cards darkMode={darkMode} />
       </div>
+      <Footer />
     </div>
 
   )
