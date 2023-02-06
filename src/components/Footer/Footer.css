@@ -1,20 +1,21 @@
 .Footer {
     background-color: rgb(34, 34, 34);
     width: 100%;
-    height: 20vw;
+    height: 400px;
     color: white;
-    display: grid;
-    place-items: center;
-}
-
-.footerContent {
     display: flex;
     flex-direction: row;
-    width: 80vw;
-    height: 15vw;
+    align-items: center;
 }
 
-.list1 {
-    border: 1px solid red;
-    width: 50%;
+.profiles {
+    /* border: 1px solid red; */
+    height: 300px;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 0 20px;
 }
+
