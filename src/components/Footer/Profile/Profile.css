@@ -1,13 +1,69 @@
 .Profile {
-    background-color: rgb(154, 154, 154);
+    /* border: 1px solid blue; */
     width: 100%;
     height: fit-content;
-    border-radius: 10px;
-    margin: 20px 0;
+    border-radius: 25px;
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(255, 255, 255);
+    box-shadow: 5px 5px 15px 0 rgba(255, 255, 255, 0.20);
 }
 
-.Profile div{
-    border: 1px solid blue;
+.Profile .img {
+    border: 2px solid black;
+    border-radius: 50%;
+    width: 100px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: purple;
+}
+
+.Profile .img img {
+    border-radius: 50%;
+    object-fit: fill;
     width: 100%;
     height: 100%;
+}
+
+.Profile .Info {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    padding: 5px 10px;
+}
+
+.Profile .Info .Title {
+    font-size: 20px;
+    color: purple;
+}
+
+.Profile .Info .InfoPara {
+    font-size: 14px;
+    color: black;
+    text-align: justify;
+    margin: 5px 0px;
+}
+
+.Social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Social>span {
+    padding: 5px 10px;
+}
+
+.Social>span>a>svg {
+    border-radius: 50%;
+    transition: all 0.3s ease-in;
+}
+
+.Social>span>a>svg:hover {
+    box-shadow: 2px 2px 7px 0 rgb(87, 87, 87);
 }
