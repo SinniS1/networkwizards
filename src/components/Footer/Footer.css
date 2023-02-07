@@ -1,21 +1,93 @@
 .Footer {
     background-color: rgb(34, 34, 34);
     width: 100%;
-    height: 400px;
+    height: 360px;
     color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    /* border: 1px solid red; */
+
+}
+
+.footer1 {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
+    /* border: 1px solid red; */
 }
 
 .profiles {
     /* border: 1px solid red; */
     height: 300px;
-    width: 35%;
+    width: 550px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    margin: 0 0 0 20px;
 }
 
+
+.footerContent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 10px;
+    height: 30px;
+    width: 100%;
+}
+
+
+.AboutUs {
+    width: 550px;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid red; */
+
+}
+
+.AboutUs .AboutInfo {
+    margin-top: 20px;
+    height: 80%;
+    text-align: justify;
+    /* border: 1px solid red; */
+
+}
+
+.line {
+    /* border: 1px solid red; */
+    border-left: 2px solid white;
+    height: 95%;
+    margin: 0 20px;
+}
+
+@media screen and (max-width:750px) {
+    .Footer {
+        height: fit-content;
+    }
+
+    .footer1 {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:580px) {
+    .profiles{
+        width: auto;
+        padding-bottom: 10px;
+        height: auto;
+    }
+    .AboutUs{
+        height: auto;
+        width: auto;
+    }
+    .footerContent{
+        display: none;
+    }
+}
