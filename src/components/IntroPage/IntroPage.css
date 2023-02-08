@@ -23,6 +23,10 @@
     padding: 20px 0;
 }
 
+.Pages {
+    transform: rotate(0deg);
+}
+
 .darkIntroContent {
     background: rgba(255, 255, 255, 0.50);
     box-shadow: 5px 5px 15px 0 rgba(255, 255, 255, 0.20);
@@ -40,11 +44,12 @@
 
 .changeCourses {
     font-size: 1.5rem;
-    width: 220px;
+    width: 225px;
 }
 
 .NetWiz {
     color: purple;
+    margin: 0 5px;
 }
 
 

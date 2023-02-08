@@ -2,9 +2,19 @@ import React, { useEffect, useRef } from 'react'
 import Box from '../Box/Box';
 import "./IntroPage.css"
 
-const IntroPage = ({ darkMode }) => {
+const IntroPage = ({ darkMode, typingEffect, PageName }) => {
     const textDisplay = useRef(null);
     const phrase = ["Coding", "Programming", "Networking"];
+    const Pagename = useRef(null)
+    useEffect(() => {
+        const func = () => {
+            if (Pagename.current) {
+                Pagename.current.innerHTML = PageName
+            }
+        }
+        return func;
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
 
     useEffect(() => {
         let i = 0;
@@ -42,12 +52,11 @@ const IntroPage = ({ darkMode }) => {
 
     return (
         <div className={`IntroPage `}>
-            <div className={`IntroContent ${darkMode ? "darkIntroContent" : "lightIntroContent"}`}>
+            <div className={`IntroContent ${darkMode ? "darkIntroContent" : "lightIntroContent"} ${typingEffect ? "" : "Pages"}`}>
                 <div className="heading">Welcome to <span className='NetWiz'>Network Wizards</span></div>
                 <div className="changeContainer">
                     <div className="changeCourses">
-                        <span className='Learn'>Learn <span id='text' ref={textDisplay} className='NetWiz'></span></span>
-
+                        <span className='Learn'>Learn <span id='text' ref={typingEffect ? textDisplay : Pagename} className='NetWiz'></span></span>
                     </div>
                 </div>
                 <div className="para">
