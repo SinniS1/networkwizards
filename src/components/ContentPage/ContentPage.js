@@ -38,7 +38,7 @@ const ContentPage = ({ darkMode }) => {
       <div className="CardSection">
         {posts ? posts.map(card => (
           <div key={card.id}>
-            <Cards key={card.id} categorie={card.categories == 8 ? "Trending" : card.categories == 10 ? "Hacking" : card.categories == 11 ? "Networking" : "Uncategorized"} darkMode={darkMode} title={card.title.rendered} content={<p dangerouslySetInnerHTML={{ __html: card.excerpt.rendered }} />} />
+            <Cards key={card.id} categorie={card.categories == 8 ? "Trending" : card.categories == 10 ? "Hacking" : card.categories == 9 ? "Networking" : card.categories == 11 ? "Coding" : "Uncategorized"} darkMode={darkMode} title={card.title.rendered} content={<p dangerouslySetInnerHTML={{ __html: card.excerpt.rendered }} />} />
           </div>
         )) : ""}
       </div>
