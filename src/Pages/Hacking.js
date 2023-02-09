@@ -1,18 +1,47 @@
-import React from 'react'
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
 import Cards from '../components/Cards/Cards'
 import IntroPage from '../components/IntroPage/IntroPage'
+import ErrorPage from '../components/OtherCom/ErrorPage'
+import Loading from '../components/OtherCom/Loading'
 
 const Hacking = ({ darkMode }) => {
-  const temp = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur expedita illo laudantium soluta tenetur molestiae quod reprehenderit, qui sint ut repellat provident magnam repellendus pariatur enim, hic aut alias, maiores beatae. Assumenda officiis voluptates ab vitae enim aliquid, corporis amet tempora, deleniti distinctio autem quaerat totam eum cupiditate eaque dignissimos?"
+  const [hacking, setHacking] = useState(null)
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
+
+  useEffect(() => {
+    const fetchData = async () => {
+      setLoading(true)
+      setError(null)
+      try {
+        const res = await axios.get('https://networkwizards.tech/wp-json/wp/v2/hacking/')
+        setHacking(res.data)
+      } catch (err) {
+        setError(err)
+      }
+      setTimeout(() => {
+        setLoading(false)
+      }, 1000)
+    }
+    fetchData()
+  }, [])
+  if (loading) {
+    return <Loading loading={loading} />
+  }
+  if (error) {
+    return <ErrorPage error={error} />
+  }
   return (
     <div className={`ContentPage ${darkMode ? "dark" : "light"}`}>
       <IntroPage darkMode={darkMode} typingEffect={false} PageName={"Hacking"} />
       <div className="CardSection">
-        <Cards darkMode={darkMode} categorie={"Hacking"} title={"Where to Learn Hacking"} content={temp} />
-        <Cards darkMode={darkMode} categorie={"Hacking"} title={"Is Hacking Hard 🤔"} content={temp} />
-        <Cards darkMode={darkMode} categorie={"Hacking"} title={"Learn Hacking from Best peoples"} content={temp} />
-        <Cards darkMode={darkMode} categorie={"Hacking"} title={"Why you should learn Hacking"} content={temp} />
-        <Cards darkMode={darkMode} categorie={"Hacking"} title={"High paying jobs are form Hacking career"} content={temp} />
+        {hacking ? hacking.map(card => (
+          <div key={card.id}>
+            {/* <p dangerouslySetInnerHTML={{ __html: card.content.rendered }} />  -> API send the text with some html this will remove those element  */}
+            <Cards key={card.id} darkMode={darkMode} title={card.title.rendered} content={<p dangerouslySetInnerHTML={{ __html: card.excerpt.rendered }} />} />
+          </div>
+        )) : ""}
       </div>
     </div>
   )

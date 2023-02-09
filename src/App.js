@@ -5,7 +5,6 @@ import Layout from "./components/Layout";
 import Coding from "./Pages/Coding"
 import Hacking from "./Pages/Hacking"
 import Networking from "./Pages/Networking"
-import Error from "./Pages/Error"
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -21,7 +20,6 @@ function App() {
         <Route path="/Coding" element={<Coding darkMode={darkMode} />} />
         <Route path="/Hacking" element={<Hacking darkMode={darkMode} />} />
         <Route path="/Networking" element={<Networking darkMode={darkMode} />} />
-        <Route path="/*" element={<Error />} />
       </Route>
       {/* <ContentPage darkMode={darkMode} /> */}
     </Routes>

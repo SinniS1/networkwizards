@@ -1,19 +1,46 @@
-import React from 'react'
+/* eslint-disable eqeqeq */
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
 import Cards from '../Cards/Cards'
 import IntroPage from '../IntroPage/IntroPage'
+import ErrorPage from '../OtherCom/ErrorPage'
+import Loading from '../OtherCom/Loading'
 const ContentPage = ({ darkMode }) => {
-  const temp = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam dolorem laudantium cum natus voluptatum, eos expedita quas voluptates, molestiae omnis quam consequuntur soluta architecto rem possimus deleniti voluptatem! Ut non sit doloremque est inventore exercitationem harum soluta. Nobis, nesciunt similique veniam dolorum, ut accusamus nulla odio mollitia vero ullam saepe."
+  const [posts, setPosts] = useState(null)
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
+
+  useEffect(() => {
+    const fetchData = async () => {
+      setLoading(true)
+      setError(null)
+      try {
+        const res = await axios.get('https://networkwizards.tech/wp-json/wp/v2/posts/')
+        setPosts(res.data)
+      } catch (err) {
+        setError(err)
+      }
+      setTimeout(() => {
+        setLoading(false)
+      }, 1000)
+    }
+    fetchData()
+  }, [])
+  if (loading) {
+    return <Loading loading={loading} />
+  }
+  if (error) {
+    return <ErrorPage error={error} />
+  }
   return (
-    // Content page will have all the boxes with the content in it
     <div className={`ContentPage ${darkMode ? "dark" : "light"}`}>
       <IntroPage darkMode={darkMode} typingEffect={true} />
-      {/* div for next cards section */}
       <div className="CardSection">
-        <Cards darkMode={darkMode} categorie={"Networking"} title={"Basics of Networking"} content={temp} />
-        <Cards darkMode={darkMode} categorie={"Coding"} title={"Where to Learn Coding"} content={temp} />
-        <Cards darkMode={darkMode} categorie={"Hacking"} title={"Fucture of Hacking"} content={temp} />
-        <Cards darkMode={darkMode} categorie={"Coding"} title={"Best Practises of Coding"} content={temp} />
-        <Cards darkMode={darkMode} categorie={"Networking"} title={"Computer Networking is easy!!!"} content={temp} />
+        {posts ? posts.map(card => (
+          <div key={card.id}>
+            <Cards key={card.id} categorie={card.categories == 8 ? "Trending" : card.categories == 10 ? "Hacking" : card.categories == 11 ? "Networking" : "Uncategorized"} darkMode={darkMode} title={card.title.rendered} content={<p dangerouslySetInnerHTML={{ __html: card.excerpt.rendered }} />} />
+          </div>
+        )) : ""}
       </div>
     </div>
 
