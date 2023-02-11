@@ -28,7 +28,8 @@
 }
 
 .dark {
-  background-image: linear-gradient(-225deg, #10265e 0%, #31275e 48%, #332545 100%);
+  /* background-image: linear-gradient(-225deg, #10265e 0%, #31275e 48%, #332545 100%); */
+  background-color: #0e1419;
 }
 
 .light {

@@ -5,7 +5,7 @@ import IntroPage from '../components/IntroPage/IntroPage'
 import ErrorPage from '../components/OtherCom/ErrorPage'
 import Loading from '../components/OtherCom/Loading'
 
-const Networking = ({ darkMode }) => {
+const Networking = ({ darkMode, search }) => {
     const [networking, setNetworking] = useState(null)
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(null)
@@ -16,7 +16,7 @@ const Networking = ({ darkMode }) => {
             setError(null)
             try {
                 // eslint-disable-next-line
-                const res = await axios.get('https://networkwizards.tech/wp-json/wp/v2/networking/'  + '?t=' + new Date().getTime())
+                const res = await axios.get(`http://itspersonalwebsite.live//wp-json/wp/v2/networking?search=${search}&t=${new Date().getTime()}`);
                 setNetworking(res.data)
             } catch (err) {
                 setError(err)
@@ -24,7 +24,7 @@ const Networking = ({ darkMode }) => {
             setLoading(false)
         }
         fetchData()
-    }, [])
+    }, [search])
 
     if (loading) {
         return <Loading loading={loading} darkMode={darkMode} />

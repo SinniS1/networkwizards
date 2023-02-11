@@ -53,7 +53,7 @@ const IntroPage = ({ darkMode, typingEffect, PageName }) => {
     return (
         <div className={`IntroPage `}>
             <div className={`IntroContent ${darkMode ? "darkIntroContent" : "lightIntroContent"} ${typingEffect ? "" : "Pages"}`}>
-                <div className="heading">Welcome to <span className='NetWiz'>Network Wizards</span></div>
+                <div className="heading">Welcome to <span className="NetWiz">Network Wizards</span></div>
                 <div className="changeContainer">
                     <div className="changeCourses">
                         <span className='Learn'>Learn <span id='text' ref={typingEffect ? textDisplay : Pagename} className='NetWiz'></span></span>

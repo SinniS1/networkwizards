@@ -1,10 +1,20 @@
 import React, { useState } from 'react'
 import "./Navbar.css"
 import { Link } from "react-router-dom";
-const Navbar = ({ toggleDarkMode, darkMode }) => {
+const Navbar = ({ toggleDarkMode, darkMode, SearchValue }) => {
   const [tglNav, setTglNav] = useState(true)
   const toggleNav = () => {
     setTglNav(tglNav => !tglNav)
+  }
+  const [input, setInput] = useState("")
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      SearchValue(input)
+    }
+  };
+  const notFocus = () => {
+    SearchValue("")
+    setInput("")
   }
   return (
     <div className={`Navbar ${darkMode ? "darkNavbar" : "lightNavbar"}`}>
@@ -14,9 +24,9 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
         </Link>
       </span>
       <ul className={`${tglNav ? "switchNav" : "lists"} ${darkMode ? "darkLists" : "lightLists"}`}>
-        <li> <Link className='nav-link' to={"/Hacking"}>Hacking</Link> </li>
-        <li><Link className='nav-link' to={"/Coding"}>Coding</Link> </li>
-        <li><Link className='nav-link' to={"/Networking"}>Networking</Link> </li>
+        <li> <Link className={darkMode ? "darkLink" : "nav-link"} to={"/Hacking"}>Hacking</Link> </li>
+        <li><Link className={darkMode ? "darkLink" : "nav-link"} to={"/Coding"}>Coding</Link> </li>
+        <li><Link className={darkMode ? "darkLink" : "nav-link"} to={"/Networking"}>Networking</Link> </li>
         <li>
           <label className="switch">
             <input type="checkbox" onClick={toggleDarkMode} />
@@ -25,7 +35,7 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
         </li>
         <li>
           <div className={`input-box`}>
-            <input type="text" className={darkMode ? "darkSearch" : ""} placeholder="Search Here" />
+            <input onBlur={() => notFocus()} type="text" className={darkMode ? "darkSearch" : ""} placeholder="Search blog" value={input} onChange={(e) => setInput(e.target.value)} onKeyDown={handleKeyDown} />
           </div>
         </li>
       </ul>

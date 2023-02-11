@@ -5,7 +5,7 @@ import IntroPage from '../components/IntroPage/IntroPage'
 import ErrorPage from '../components/OtherCom/ErrorPage'
 import Loading from '../components/OtherCom/Loading'
 
-const Hacking = ({ darkMode }) => {
+const Hacking = ({ darkMode, search }) => {
   const [hacking, setHacking] = useState(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
@@ -15,18 +15,19 @@ const Hacking = ({ darkMode }) => {
       setLoading(true)
       setError(null)
       try {
-         // eslint-disable-next-line
-        const res = await axios.get('https://networkwizards.tech/wp-json/wp/v2/hacking/'  + '?t=' + new Date().getTime())
+        // eslint-disable-next-line
+        const res = await axios.get(`http://itspersonalwebsite.live//wp-json/wp/v2/hacking?search=${search}&t=${new Date().getTime()}`);
+
         setHacking(res.data)
       } catch (err) {
         setError(err)
       }
-        setLoading(false)
+      setLoading(false)
     }
     fetchData()
-  }, [])
+  }, [search])
   if (loading) {
-    return <Loading loading={loading} darkMode={darkMode}  />
+    return <Loading loading={loading} darkMode={darkMode} />
   }
   if (error) {
     return <ErrorPage error={error} />

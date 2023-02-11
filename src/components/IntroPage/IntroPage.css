@@ -9,8 +9,8 @@
 .IntroContent {
     position: relative;
     z-index: 5;
-    /* backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px); */
+    /* backdrop-filter: blur(20px); */
+    /* -webkit-backdrop-filter: blur(20px); */
     border-radius: 10px;
     max-width: fit-content;
     max-height: fit-content;
@@ -28,8 +28,12 @@
 }
 
 .darkIntroContent {
-    background: rgba(255, 255, 255, 0.50);
+    background-image: linear-gradient(-255deg, #28292f 0%, #0f131b 100%);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
     box-shadow: 5px 5px 15px 0 rgba(255, 255, 255, 0.20);
+    border: 1px solid rgb(62, 62, 62);
+    color: rgb(220, 220, 220);
 }
 
 .lightIntroContent {
@@ -38,7 +42,7 @@
 }
 
 .heading {
-    font-size: 1.0rem;
+    font-size: 1rem;
     text-align: center;
     margin: 0 5px;
 }
