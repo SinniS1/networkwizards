@@ -15,10 +15,12 @@ const Footer = () => {
         name: "Rajvinder",
         Intro: "I am a Android Developer, I created some of the best android applicaitons available on Internet, You can follow me on these social media platforms.",
         img: { img },
-        linkedIn: "https://www.linkedin.com/in/sachin-yadav-37b39b260",
-        github: "https://github.com/SinniS1",
-        mail: "sachinyadav30112001@gmail.com"
+        linkedIn: "https://www.linkedin.com/in/rajvinder-singh-62341b185",
+        github: "https://github.com/itsrajpy",
+        mail: "terahero554@gmail.com"
     }
+    const Info1 = `Welcome to NetworkWizards.tech, where coding, hacking, and computer networking meet. Our aim is to provide you with comprehensive, up-to-date information and knowledge on these exciting and rapidly evolving fields.`
+    const Info2 = `We are a team of two BCA students, passionate about technology and its impact on the world. Our developer creates interactive and engaging content, while our post writer ensures the content is easily digestible and informative. Together, we strive to make technology accessible to everyone, regardless of their background or experience`
     return (
         <div className='Footer'>
             <div className="footer1">
@@ -29,7 +31,7 @@ const Footer = () => {
                 <div className="line"></div>
                 <div className="AboutUs">
                     <div className="heading">AboutUs</div>
-                    <div className="AboutInfo"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis sapiente laborum tempora quis dicta ipsa sunt commodi omnis sit aspernatur quisquam modi placeat nulla reprehenderit eligendi repellat quia, distinctio, asperiores molestias hic dolorem et? Exercitationem vel alias rerum officiis! Ab, libero qui cumque ducimus praesentium explicabo? Ut beatae facere repellat.Fuck you</div>
+                    <div className="AboutInfo"> {Info1} <br /> <br />{Info2}</div>
                 </div>
             </div>
             <div className="footerContent">
@@ -37,7 +39,7 @@ const Footer = () => {
                 <div className="line"></div>
                 <div>Rajvinder</div>
                 <div className="line"></div>
-                <div>emailAddress@gmal.com</div>
+                <div>terahero554@gmail.com</div>
             </div>
         </div>
 

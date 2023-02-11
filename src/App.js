@@ -21,7 +21,6 @@ function App() {
         <Route path="/Hacking" element={<Hacking darkMode={darkMode} />} />
         <Route path="/Networking" element={<Networking darkMode={darkMode} />} />
       </Route>
-      {/* <ContentPage darkMode={darkMode} /> */}
     </Routes>
   );
 }

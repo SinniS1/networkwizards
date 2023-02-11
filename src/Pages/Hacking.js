@@ -15,19 +15,18 @@ const Hacking = ({ darkMode }) => {
       setLoading(true)
       setError(null)
       try {
-        const res = await axios.get('https://networkwizards.tech/wp-json/wp/v2/hacking/')
+         // eslint-disable-next-line
+        const res = await axios.get('https://networkwizards.tech/wp-json/wp/v2/hacking/'  + '?t=' + new Date().getTime())
         setHacking(res.data)
       } catch (err) {
         setError(err)
       }
-      setTimeout(() => {
         setLoading(false)
-      }, 1000)
     }
     fetchData()
   }, [])
   if (loading) {
-    return <Loading loading={loading} />
+    return <Loading loading={loading} darkMode={darkMode}  />
   }
   if (error) {
     return <ErrorPage error={error} />

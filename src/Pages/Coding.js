@@ -15,19 +15,18 @@ const Coding = ({ darkMode }) => {
       setLoading(true)
       setError(null)
       try {
-        const res = await axios.get('https://networkwizards.tech/wp-json/wp/v2/coding/')
+         // eslint-disable-next-line
+        const res = await axios.get('https://networkwizards.tech/wp-json/wp/v2/coding/'  + '?t=' + new Date().getTime())
         setCoding(res.data)
       } catch (err) {
         setError(err)
       }
-      setTimeout(() => {
-        setLoading(false)
-      }, 1000)
+      setLoading(false)
     }
     fetchData()
   }, [])
   if (loading) {
-    return <Loading loading={loading} />
+    return <Loading loading={loading} darkMode={darkMode}  />
   }
   if (error) {
     return <ErrorPage error={error} />
