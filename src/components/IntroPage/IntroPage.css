@@ -8,7 +8,6 @@
 
 .IntroContent {
     position: relative;
-    z-index: 5;
     /* backdrop-filter: blur(20px); */
     /* -webkit-backdrop-filter: blur(20px); */
     border-radius: 10px;

@@ -33,11 +33,11 @@ const Navbar = ({ toggleDarkMode, darkMode, SearchValue }) => {
             <span className="slider"></span>
           </label>
         </li>
-        <li>
+        {/* <li>
           <div className={`input-box`}>
             <input onBlur={() => notFocus()} type="text" className={darkMode ? "darkSearch" : ""} placeholder="Search blog" value={input} onChange={(e) => setInput(e.target.value)} onKeyDown={handleKeyDown} />
           </div>
-        </li>
+        </li> */}
       </ul>
       <div className="switched">
         <input type="checkbox" onClick={toggleNav} />

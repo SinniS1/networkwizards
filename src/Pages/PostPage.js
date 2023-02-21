@@ -49,11 +49,6 @@ const PostPage = ({ cardID, page, darkMode }) => {
                 <div className="NetWiz">{content.attributes.PostName}</div>
                 <div className="para">{parse(content.attributes.PostContent)} Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque quaerat odit officiis, voluptates earum dolores praesentium natus dolorum, ab soluta rem esse blanditiis cumque! Velit tempora distinctio officiis corrupti eveniet.</div>
             </div>
-            {/* <div className="CardSection">
-                <div key={content.id}>
-                    <Cards key={content.id} category={content.attributes.Cattegory} darkMode={darkMode} title={content.attributes.PostName} content={<p dangerouslySetInnerHTML={{ __html: content.attributes.PostContent }} />} />
-                </div>
-            </div> */}
         </div >
     )
 }
