@@ -48,8 +48,7 @@ const PostPage = ({ cardID, page, darkMode }) => {
 			<div className={`IntroContent PostPage ${darkMode ? "darkIntroContent" : "lightIntroContent"}`}>
 				<div className={`${darkMode ? "darkNetWiz" : "NetWiz"}`}>{content.attributes.PostName}</div>
 				<div className="para">
-					{parse(content.attributes.PostContent)} Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque quaerat odit officiis, voluptates
-					earum dolores praesentium natus dolorum, ab soluta rem esse blanditiis cumque! Velit tempora distinctio officiis corrupti eveniet.
+					{parse(content.attributes.PostContent)}
 				</div>
 			</div>
 		</div>
