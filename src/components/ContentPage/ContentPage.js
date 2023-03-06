@@ -5,12 +5,10 @@ import Cards from '../Cards/Cards'
 import IntroPage from '../IntroPage/IntroPage'
 import ErrorPage from '../OtherCom/ErrorPage'
 import Loading from '../OtherCom/Loading'
-import { useNavigate } from 'react-router-dom'
 const ContentPage = ({ darkMode, search, PageValue }) => {
   const [posts, setPosts] = useState(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
-  // const navigate = useNavigate()
   
   useEffect(() => {
     const fetchData = async () => {

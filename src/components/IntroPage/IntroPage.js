@@ -7,16 +7,6 @@ const IntroPage = ({ darkMode, typingEffect, PageName }) => {
 	const phrase = ["Coding", "Programming", "Networking"];
 	const Pagename = useRef(null);
 	useEffect(() => {
-		const func = () => {
-			if (Pagename.current) {
-				Pagename.current.innerHTML = PageName;
-			}
-		};
-		return func;
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, []);
-
-	useEffect(() => {
 		let i = 0;
 		let j = 0;
 		let isDeleting = false;
@@ -59,7 +49,7 @@ const IntroPage = ({ darkMode, typingEffect, PageName }) => {
 				<div className="changeContainer">
 					<div className="changeCourses">
 						<span className="Learn">
-							Learn <span id="text" ref={typingEffect ? textDisplay : Pagename} className={`${darkMode ? "darkNetWiz" : "NetWiz"}`}></span>
+							Learn{" "}<span id="text" ref={typingEffect ? textDisplay : Pagename} className={`${darkMode ? "darkNetWiz" : "NetWiz"}`}>{PageName ? PageName : ""}</span>
 						</span>
 					</div>
 				</div>
