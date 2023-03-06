@@ -1,5 +1,6 @@
 {
   "name": "networkwizards",
+  "homepage": "http://networkwizards.tech/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -15,7 +16,7 @@
     "react-spinners": "^0.13.8",
     "web-vitals": "^2.1.4"
   },
-  "homepage": ".",
+
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
