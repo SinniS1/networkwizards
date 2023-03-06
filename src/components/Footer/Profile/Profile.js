@@ -4,7 +4,7 @@ const Profile = ({ Info }) => {
     return (
         <div className='Profile'>
             <div className="img">
-                <img src={Info.img.img} alt="sachin" />
+                <img src={Info.img.raj ? Info.img.raj : Info.img.sachin} alt="nothing" />
             </div>
             <div className="Info">
                 <span className="Title">{Info.name}</span>

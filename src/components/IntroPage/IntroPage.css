@@ -27,12 +27,13 @@
 }
 
 .darkIntroContent {
-    background-image: linear-gradient(-255deg, #28292f 0%, #0f131b 100%);
+    /* background-image: linear-gradient(-255deg, #28292f 0%, #0f131b 100%); */
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(2px);
-    box-shadow: 5px 5px 15px 0 rgba(255, 255, 255, 0.20);
-    border: 1px solid rgb(62, 62, 62);
-    color: rgb(220, 220, 220);
+    box-shadow: 3px 3px 3px 0 rgba(43, 32, 104, 0.20);
+    border: 1px solid rgb(89, 44, 126);
+    color: rgb(203, 190, 190);
+    background-color: #131034;
 }
 
 .lightIntroContent {
@@ -54,9 +55,14 @@
 .NetWiz {
     font-size: 1.5rem;
     color: purple;
+    /* color: white; */
     margin: 0 5px;
 }
 
+.darkNetWiz{
+    font-size: 1.5rem;
+    color: white;
+}
 
 .para {
     font-size: 1rem;

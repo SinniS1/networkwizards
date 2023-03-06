@@ -32,7 +32,7 @@
     position: absolute;
     bottom: -3px;
     right: 2px;
-    color: blue;
+    color: rgb(95, 95, 145);
     /* border: 1px solid red; */
     transition: font-size 500ms ease;
 }

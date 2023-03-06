@@ -8,7 +8,7 @@ import Networking from "./Pages/Networking"
 import PostPage from "./Pages/PostPage";
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   const toggleDarkMode = () => {
     setDarkMode(prevDarkMode => !prevDarkMode);
