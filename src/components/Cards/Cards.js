@@ -11,6 +11,7 @@ const Cards = ({ darkMode, category, title, content, PageValue, cardID, page }) 
 		navigate("/PostPage");
 		PageValue(id, page);
 	};
+	console.log("cards  " + page);
 	return (
 		<div className={`Cards IntroContent ${darkMode ? "darkIntroContent" : "lightIntroContent"}`}>
 			<div onClick={() => openPostPage(cardID, page)} className="cardDiv">

@@ -22,7 +22,7 @@ const Navbar = ({ toggleDarkMode, darkMode, SearchValue }) => {
     <div className={`Navbar ${darkMode ? "darkNavbar" : "lightNavbar"}`}>
       <span>
         <Link className='nav-link' to={"/"}>
-          <img alt='nothing' src={box1}></img>
+          <img className='logo' alt='nothing' src={box1}></img>
         </Link>
       </span>
       <ul className={`${tglNav ? "switchNav" : "lists"} ${darkMode ? "darkLists" : "lightLists"}`}>

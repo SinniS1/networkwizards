@@ -20,8 +20,7 @@ function App() {
   const [cardID, setCardID] = useState()
   const [page, setPage] = useState()
   const PageValue = (id, pg) => {
-    const pge = `${pg.toLowerCase()}s`
-    setPage(pge)
+    setPage(pg)
     setCardID(id)
   }
   return (
