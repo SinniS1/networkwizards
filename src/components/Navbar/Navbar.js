@@ -15,8 +15,10 @@ const Navbar = ({ toggleDarkMode, darkMode, SearchValue }) => {
     }
   };
   const notFocus = () => {
-    SearchValue("")
-    setInput("")
+    setTimeout(() => {
+      SearchValue("")
+      setInput("")
+    }, 1000);
   }
   return (
     <div className={`Navbar ${darkMode ? "darkNavbar" : "lightNavbar"}`}>
