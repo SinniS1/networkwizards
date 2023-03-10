@@ -42,7 +42,7 @@ const PostPage = ({ cardID, page, darkMode }) => {
 	}
 	return (
 		<div className={`ContentPage  IntroPage ${darkMode ? "dark" : "light"}`}>
-			<div className={`IntroContent PostPage ${darkMode ? "darkIntroContent" : "lightIntroContent"}`}>
+			<div className={`PostPage ${darkMode ? "darkIntroContent" : "lightIntroContent"}`}>
 				<div className={`${darkMode ? "darkNetWiz" : "NetWiz"}`}>{data[`${page || localPage}`].postName}</div>
 				<div className="para">{parse(data[`${page || localPage}`].postContent.html)}</div>
 			</div>

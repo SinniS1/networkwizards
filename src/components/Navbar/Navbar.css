@@ -222,7 +222,7 @@ input:checked+.slider:before {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        transition: transform 0.1s, width 0.5s;
+        transition: transform 0.5s, width 0.5s;
     }
 
     .switched .line-1 {
@@ -239,15 +239,15 @@ input:checked+.slider:before {
         transform-origin: 100% 0;
     }
 
-    input:checked+div span.line-1 {
+    input:checked+div>span.line-1 {
         transform: translate(0, 0) rotate(-45deg);
     }
 
-    input:checked+div span.line-3 {
+    input:checked+div>span.line-3 {
         transform: translate(-100%, 0) rotate(-45deg);
     }
 
-    input:checked+div span.line-2 {
+    input:checked+div>span.line-2 {
         transform: translate(-50%, -50%) rotate(45deg);
     }
 }
