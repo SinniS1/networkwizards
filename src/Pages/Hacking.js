@@ -43,6 +43,7 @@ const Hacking = ({ darkMode, search, PageValue }) => {
 						/>
 					))}
 			</div>
+			<div className="space"></div>
 		</div>
 	);
 };
