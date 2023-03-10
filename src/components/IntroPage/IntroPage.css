@@ -8,17 +8,15 @@
 
 .IntroContent {
     position: relative;
-    /* backdrop-filter: blur(20px); */
-    /* -webkit-backdrop-filter: blur(20px); */
     border-radius: 10px;
     max-width: fit-content;
     max-height: fit-content;
     margin: 150px 200px;
-    transform: rotate(-3deg);
+    transform: rotate(0deg);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     padding: 20px 0;
 }
 
@@ -32,9 +30,22 @@
     background-color: rgb(25, 22, 64);
 }
 
+.darkIntroPage {
+    color: rgb(191, 191, 191);
+}
+
 .lightIntroContent {
     background: rgba(255, 255, 255, 0.15);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.30);
+}
+
+.darkIntroTitle {
+    font-size: 3rem;
+    color: #9333ea;
+}
+
+.littleIntroTitle {
+    font-size: 3rem;
 }
 
 .heading {
@@ -56,7 +67,7 @@
 
 .darkNetWiz {
     font-size: 1.5rem;
-    color: white;
+    color: #9333ea;
     margin: 0 5px;
 }
 
@@ -64,6 +75,11 @@
     font-size: 1rem;
     margin: 10px 20px;
     text-align: justify;
+}
+.introPara{
+    font-size: 1rem;
+    margin: 10px 20px;
+    text-align: center;
 }
 
 
@@ -83,6 +99,15 @@
 
 @media screen and (max-width: 425px) {
     .para>p {
-        font-size: 12px;
+        font-size: 15px;
+    }
+
+    .darkIntroTitle {
+        font-size: 2rem;
+        color: #9333ea;
+    }
+
+    .littleIntroTitle {
+        font-size: 2rem;
     }
 }

@@ -43,3 +43,22 @@
 .box:nth-child(odd)+.box1 {
     transform: rotate(90deg);
 }
+
+@media screen and (max-width:500px) {
+    .box1 {
+        transform: rotate(20deg);
+        top: 360px;
+        left: -10px;
+    }
+
+    .box2 {
+        top: calc(100% - 10px);
+        transform: rotate(0deg);
+    }
+
+    .box3 {
+        right: -10px;
+        top: 360px;
+        transform: rotate(-20deg);
+    }
+}

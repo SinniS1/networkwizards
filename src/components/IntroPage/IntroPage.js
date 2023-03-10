@@ -42,18 +42,21 @@ const IntroPage = ({ darkMode, typingEffect, PageName }) => {
 
 	return (
 		<div className={`IntroPage `}>
-			<div className={`IntroContent ${darkMode ? "darkIntroContent" : "lightIntroContent"} ${typingEffect ? "" : "Pages"}`}>
+			<div className={`IntroContent ${darkMode ? "darkIntroPage" : "lightIntroPage"} ${typingEffect ? "" : "Pages"}`}>
 				<div className="heading">
-					Welcome to <span className={`${darkMode ? "darkNetWiz" : "NetWiz"}`}>Network Wizards</span>
+					<span className={`${darkMode ? "darkIntroTitle" : "littleIntroTitle"}`}>Network Wizards</span>
 				</div>
 				<div className="changeContainer">
 					<div className="changeCourses">
 						<span className="Learn">
-							Learn{" "}<span id="text" ref={typingEffect ? textDisplay : Pagename} className={`${darkMode ? "darkNetWiz" : "NetWiz"}`}>{PageName ? PageName : ""}</span>
+							Learn{" "}
+							<span id="text" ref={typingEffect ? textDisplay : Pagename} className={`${darkMode ? "darkNetWiz" : "NetWiz"}`}>
+								{PageName ? PageName : ""}
+							</span>
 						</span>
 					</div>
 				</div>
-				<div className="para">
+				<div className="introPara">
 					NetworkWizards is a comprehensive resource for individuals interested in coding, computer networking, and cyber security. Our aim is to
 					provide accessible and informative content to help you expand your skills in these exciting fields. From tutorials and how-to guides to the
 					latest advancements, our website has everything you need to become a coding, networking, or security expert. Join our community of

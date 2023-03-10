@@ -1,6 +1,6 @@
 import React from "react";
 import "./Footer.css";
-import raj from "../../assests/raj.png";
+import raj from "../../assests/raj.jpg";
 import sachin from "../../assests/sachin.jpg";
 import Profile from "./Profile/Profile";
 const Footer = () => {
@@ -19,7 +19,7 @@ const Footer = () => {
 			"I am a Android Developer, I created some of the best android applicaitons available on Internet, You can follow me on these social media platforms.",
 		img: { raj },
 		linkedIn: "https://www.linkedin.com/in/rajvinder-singh-62341b185",
-		github: "https://github.com/itsrajpy",
+		github: "https://github.com/sudouserraj",
 		mail: "terahero554@gmail.com",
 	};
 	const Info1 = `Welcome to NetworkWizards.tech, where coding, hacking, and computer networking meet. Our aim is to provide you with comprehensive, up-to-date information and knowledge on these exciting and rapidly evolving fields.`;

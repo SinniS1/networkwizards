@@ -49,6 +49,7 @@ const ContentPage = ({ darkMode, search, PageValue }) => {
 					  ))
 					: ""}
 			</div>
+			<div className="space"></div>
 		</div>
 	);
 };
