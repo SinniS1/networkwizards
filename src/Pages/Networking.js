@@ -5,18 +5,32 @@ import IntroPage from "../components/IntroPage/IntroPage";
 import ErrorPage from "../components/OtherCom/ErrorPage";
 import Loading from "../components/OtherCom/Loading";
 
-const NETWORKING_QUERY = gql`
-	query {
-		networkings {
-			id
-			postName
-			postDescription
-		}
-	}
-`;
+const Networking = ({ darkMode, search, PageValue }) => {
+	// For searching only in the post name
+	// const NETWORKING_QUERY = gql`
+	// 	query NETWORKING_QUERY($searchValue: String!) {
+	// 		networkings(where: { postName_contains: $searchValue }) {
+	// 			id
+	// 			postName
+	// 			postDescription
+	// 		}
+	// 	}
+	// `;
 
-const Networking = ({ darkMode, PageValue }) => {
-	const { loading, error, data } = useQuery(NETWORKING_QUERY);
+	// For seaching deep inside the posts
+	const NETWORKING_QUERY = gql`
+		query NETWORKING_QUERY($searchValue: String!) {
+			networkings(where: { _search: $searchValue }) {
+				id
+				postName
+				postDescription
+			}
+		}
+	`;
+
+	const { loading, error, data } = useQuery(NETWORKING_QUERY, {
+		variables: { searchValue: search },
+	});
 
 	if (loading) {
 		return <Loading loading={loading} darkMode={darkMode} />;

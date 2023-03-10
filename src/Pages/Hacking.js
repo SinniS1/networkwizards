@@ -5,18 +5,19 @@ import IntroPage from "../components/IntroPage/IntroPage";
 import ErrorPage from "../components/OtherCom/ErrorPage";
 import Loading from "../components/OtherCom/Loading";
 
-const HACKINGS_QUERY = gql`
-	query {
-		hackings {
-			id
-			postName
-			postDescription
+const Hacking = ({ darkMode, search, PageValue }) => {
+	const HACKINGS_QUERY = gql`
+		query HACKINGS_QUERY($searchValue: String!) {
+			hackings(where: { _search: $searchValue }) {
+				id
+				postName
+				postDescription
+			}
 		}
-	}
-`;
-
-const Hacking = ({ darkMode, PageValue }) => {
-	const { loading, error, data } = useQuery(HACKINGS_QUERY);
+	`;
+	const { loading, error, data } = useQuery(HACKINGS_QUERY, {
+		variables: { searchValue: search },
+	});
 
 	if (loading) {
 		return <Loading loading={loading} darkMode={darkMode} />;
