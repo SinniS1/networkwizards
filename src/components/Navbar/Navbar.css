@@ -12,7 +12,7 @@
 }
 
 .darkNavbar {
-    background: rgba(33, 33, 33, 0.5);
+    background: rgba(51, 45, 103, 0.2);
     /* background-image: linear-gradient(-255deg, #28292f 0%, #0f131b 100%); */
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(2px);
@@ -64,18 +64,18 @@
     padding-left: 10px;
     font-size: 16px;
     outline: none;
-    transition: all 0.3s ease-in-out;
+    transition: border 30ms ease;
 }
 
 .input-box input:focus,
 .input-box input:valid {
-    border: 2px solid #9b59b6;
-    box-shadow: 2px 2px 6px 0px;
+    border: 1px solid #9b59b6;
+    /* box-shadow: 2px 2px 6px 0px; */
 }
 
 .input-box input:not(:focus) {
     box-shadow: none;
-    border: 1px solid #ccc;
+    border: none;
 }
 
 .darkSearch {

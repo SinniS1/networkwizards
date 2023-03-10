@@ -5,19 +5,20 @@ import IntroPage from "../IntroPage/IntroPage";
 import ErrorPage from "../OtherCom/ErrorPage";
 import Loading from "../OtherCom/Loading";
 
-const GET_POSTS = gql`
-	query {
-		posts {
-			id
-			postName
-			postDescription
-			category
-		}
-	}
-`;
-
 const ContentPage = ({ darkMode, search, PageValue }) => {
-	const { loading, error, data } = useQuery(GET_POSTS);
+	const GET_POSTS = gql`
+		query GET_POSTS($searchValue: String!) {
+			posts(where: { _search: $searchValue }) {
+				id
+				postName
+				postDescription
+				category
+			}
+		}
+	`;
+	const { loading, error, data } = useQuery(GET_POSTS, {
+		variables: { searchValue: search },
+	});
 
 	if (loading) {
 		return <Loading loading={loading} darkMode={darkMode} />;
