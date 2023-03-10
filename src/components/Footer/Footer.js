@@ -49,7 +49,7 @@ const Footer = () => {
 				{/* <div>Sachin</div> */}
 				{/* <div className="line"></div> */}
 				{/* <div>Rajvinder</div> */}
-				<div>CC made by GEEKS 💖😎</div>
+				<div>made with 💖 by GEEKS😎💻</div>
 				{/* <div className="line"></div> */}
 				{/* <div>terahero554@gmail.com</div> */}
 			</div>
