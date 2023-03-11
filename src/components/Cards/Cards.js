@@ -8,7 +8,7 @@ const Cards = ({ darkMode, category, title, content, PageValue, cardID, page }) 
 		navigate(`/${category}`);
 	};
 	const openPostPage = (id, page) => {
-		navigate("/PostPage");
+		navigate(`${id}/PostPage`);
 		PageValue(id, page);
 	};
 	return (
