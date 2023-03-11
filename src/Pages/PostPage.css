@@ -1,14 +1,12 @@
 .PostPage {
     transform: rotate(0deg);
-    margin: 110px 50px;
+    margin: 100px 100px;
     position: relative;
     border-radius: 10px;
     max-width: fit-content;
     max-height: fit-content;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     padding: 20px 0;
 }
 
@@ -18,11 +16,57 @@
         width: 100%;
         margin: 110px 20px;
     }
+
+    .postPagePara>img {
+        max-width: 100%;
+        height: auto;
+    }
 }
+
 @media screen and (max-width: 425px) {
     .PostPage {
         height: fit-content;
         width: 100%;
         margin: 110px 10px;
     }
+}
+
+.postPagePara>img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 30px auto;
+}
+
+.postPagePara,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 30px;
+
+}
+
+.darkPostTitle {
+    font-size: 3rem;
+    color: #9333ea;
+    text-align: center;
+}
+
+.ligthPostTitle {
+    font-size: 3rem;
+    color: black;
+    text-align: center;
+
+}
+
+.lightPostPage {
+    color: black;
+}
+
+.darkPostPage {
+    color: rgb(217, 216, 216);
+
 }

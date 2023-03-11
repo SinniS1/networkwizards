@@ -68,7 +68,7 @@
 .darkNetWiz {
     font-size: 1.5rem;
     color: #9333ea;
-    margin: 0 5px;
+    text-align: center;
 }
 
 .para {
@@ -91,19 +91,8 @@
         width: 100%;
         margin: 100px 20px;
     }
-
-    .para>img {
-        max-width: 100%;
-        height: auto;
-    }
 }
 
-.para>p {
-    margin-left: 20px;
-}
-.para>h1{
-    margin-top: 30px;
-}
 
 @media screen and (max-width: 425px) {
     .para>p {
