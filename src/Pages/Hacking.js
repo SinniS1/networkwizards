@@ -5,11 +5,12 @@ import IntroPage from "../components/IntroPage/IntroPage";
 import ErrorPage from "../components/OtherCom/ErrorPage";
 import Loading from "../components/OtherCom/Loading";
 
-const Hacking = ({ darkMode, search, PageValue }) => {
+const Hacking = ({ darkMode, search }) => {
 	const HACKINGS_QUERY = gql`
 		query HACKINGS_QUERY($searchValue: String!) {
 			hackings(where: { _search: $searchValue }) {
 				id
+				title
 				postName
 				postDescription
 			}
@@ -34,9 +35,8 @@ const Hacking = ({ darkMode, search, PageValue }) => {
 					hackings.map((card) => (
 						<Cards
 							key={card.id}
-							cardID={card.id}
+							cardID={card.title}
 							page={"hacking"}
-							PageValue={PageValue}
 							darkMode={darkMode}
 							title={card.postName}
 							content={<p dangerouslySetInnerHTML={{ __html: card.postDescription }} />}

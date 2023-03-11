@@ -5,23 +5,12 @@ import IntroPage from "../components/IntroPage/IntroPage";
 import ErrorPage from "../components/OtherCom/ErrorPage";
 import Loading from "../components/OtherCom/Loading";
 
-const Networking = ({ darkMode, search, PageValue }) => {
-	// For searching only in the post name
-	// const NETWORKING_QUERY = gql`
-	// 	query NETWORKING_QUERY($searchValue: String!) {
-	// 		networkings(where: { postName_contains: $searchValue }) {
-	// 			id
-	// 			postName
-	// 			postDescription
-	// 		}
-	// 	}
-	// `;
-
-	// For seaching deep inside the posts
+const Networking = ({ darkMode, search }) => {
 	const NETWORKING_QUERY = gql`
 		query NETWORKING_QUERY($searchValue: String!) {
 			networkings(where: { _search: $searchValue }) {
 				id
+				title
 				postName
 				postDescription
 			}
@@ -47,9 +36,8 @@ const Networking = ({ darkMode, search, PageValue }) => {
 					networkings.map((card) => (
 						<Cards
 							key={card.id}
-							cardID={card.id}
+							cardID={card.title}
 							page={"networking"}
-							PageValue={PageValue}
 							darkMode={darkMode}
 							title={card.postName}
 							content={<p dangerouslySetInnerHTML={{ __html: card.postDescription }} />}

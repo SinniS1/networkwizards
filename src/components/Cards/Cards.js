@@ -2,14 +2,13 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../IntroPage/IntroPage.css";
 import "./Cards.css";
-const Cards = ({ darkMode, category, title, content, PageValue, cardID, page }) => {
+const Cards = ({ darkMode, category, title, content, cardID, page }) => {
 	const navigate = useNavigate();
 	const openPage = () => {
 		navigate(`/${category}`);
 	};
 	const openPostPage = (id, page) => {
-		navigate("/PostPage");
-		PageValue(id, page);
+		navigate(`/PostPage/${page}/${id}`);
 	};
 	return (
 		<div className={`Cards IntroContent ${darkMode ? "darkIntroContent" : "lightIntroContent"}`}>

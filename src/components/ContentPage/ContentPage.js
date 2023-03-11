@@ -5,11 +5,12 @@ import IntroPage from "../IntroPage/IntroPage";
 import ErrorPage from "../OtherCom/ErrorPage";
 import Loading from "../OtherCom/Loading";
 
-const ContentPage = ({ darkMode, search, PageValue }) => {
+const ContentPage = ({ darkMode, search }) => {
 	const GET_POSTS = gql`
 		query GET_POSTS($searchValue: String!) {
 			posts(where: { _search: $searchValue }) {
 				id
+				title
 				postName
 				postDescription
 				category
@@ -38,9 +39,8 @@ const ContentPage = ({ darkMode, search, PageValue }) => {
 					? posts.map((card) => (
 							<Cards
 								key={card.id}
-								cardID={card.id}
+								cardID={card.title}
 								page={"post"}
-								PageValue={PageValue}
 								category={card.category}
 								darkMode={darkMode}
 								title={card.postName}
