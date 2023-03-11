@@ -6,8 +6,10 @@ import "./PostPage.css";
 import "../index.css";
 import "../components/IntroPage/IntroPage.css";
 import parse from "html-react-parser";
+import { useParams } from "react-router-dom";
 
-const PostPage = ({ cardID, page, darkMode }) => {
+const PostPage = ({ darkMode }) => {
+	let { cardID, page } = useParams();
 	let localCardID = "";
 	let localPage = "";
 	if (cardID) {
@@ -18,8 +20,8 @@ const PostPage = ({ cardID, page, darkMode }) => {
 		localPage = localStorage.getItem("page");
 	}
 	const gettingPOST = gql`
-		query gettingPOST($ID: ID!) {
-			${page || localPage}(where: { id: $ID }) {
+		query gettingPOST($ID: String!) {
+			${page || localPage}(where: { title: $ID }) {
 				id
 				postName
 				postContent {
@@ -41,10 +43,10 @@ const PostPage = ({ cardID, page, darkMode }) => {
 		return <ErrorPage error={error} />;
 	}
 	return (
-		<div className={`ContentPage  IntroPage ${darkMode ? "dark" : "light"}`}>
-			<div className={`PostPage ${darkMode ? "darkIntroContent" : "lightIntroContent"}`}>
-				<div className={`${darkMode ? "darkNetWiz" : "NetWiz"}`}>{data[`${page || localPage}`].postName}</div>
-				<div className="para">{parse(data[`${page || localPage}`].postContent.html)}</div>
+		<div className={`ContentPage IntroPage ${darkMode ? "dark" : "light"}`}>
+			<div className={`PostPage ${darkMode ? "darkPostPage" : "lightPostPage"}`}>
+				<div className={`${darkMode ? "darkPostTitle" : "ligthPostTitle"}`}>{data[`${page || localPage}`].postName}</div>
+				<div className="postPagePara">{parse(data[`${page || localPage}`].postContent.html)}</div>
 			</div>
 		</div>
 	);

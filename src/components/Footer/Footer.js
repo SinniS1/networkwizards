@@ -7,7 +7,7 @@ const Footer = () => {
 	const Sachin = {
 		name: "Sachin Yadav",
 		Intro:
-			"I am a Web Developer, UI/UX designer, I created some of the best website available on Internet, You can follow me on these social media platforms.",
+			"Hi there! I'm a BCA student skilled in web development technologies, experienced with NodeJS, ReactJS, Spring Boot, created some user-friendly websites with very interacitve UI/UX desings, checkout my social media handles.",
 		img: {sachin},
 		linkedIn: "https://www.linkedin.com/in/sachin-yadav-37b39b260",
 		github: "https://github.com/SinniS1",
@@ -16,7 +16,7 @@ const Footer = () => {
 	const Raj = {
 		name: "Rajvinder Singh",
 		Intro:
-			"I am a Android Developer, I created some of the best android applicaitons available on Internet, You can follow me on these social media platforms.",
+			"Hi there! I'm a BCA student with expertise in Android development. I'm skilled in Java, Kotlin, and Linux, and have created several user-friendly apps that are available on the internet, checkout my social media handles.",
 		img: { raj },
 		linkedIn: "https://www.linkedin.com/in/rajvinder-singh-62341b185",
 		github: "https://github.com/sudouserraj",

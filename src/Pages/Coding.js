@@ -5,11 +5,12 @@ import IntroPage from "../components/IntroPage/IntroPage";
 import ErrorPage from "../components/OtherCom/ErrorPage";
 import Loading from "../components/OtherCom/Loading";
 
-const Coding = ({ darkMode, search, PageValue }) => {
+const Coding = ({ darkMode, search}) => {
 	const CODINGS_QUERY = gql`
 		query CODINGS_QUERY($searchValue: String!) {
 			codings(where: { _search: $searchValue }) {
 				id
+				title
 				postName
 				postDescription
 			}
@@ -34,9 +35,8 @@ const Coding = ({ darkMode, search, PageValue }) => {
 					codings.map((card) => (
 						<Cards
 							key={card.id}
-							cardID={card.id}
+							cardID={card.title}
 							page={"coding"}
-							PageValue={PageValue}
 							darkMode={darkMode}
 							title={card.postName}
 							content={<p dangerouslySetInnerHTML={{ __html: card.postDescription }} />}
