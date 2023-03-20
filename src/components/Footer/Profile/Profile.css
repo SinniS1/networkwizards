@@ -68,3 +68,9 @@
 .Social>span>a>svg:hover {
     box-shadow: 2px 2px 7px 0 rgb(87, 87, 87);
 }
+
+@media screen and (max-width:425px) {
+    .Profile .Info .InfoPara {
+        font-size: 11px;
+    }
+}

@@ -18,6 +18,7 @@
     align-items: center;
     /* justify-content: center; */
     padding: 20px 0;
+    /* border: 1px solid red; */
 }
 
 
@@ -63,6 +64,7 @@
     font-size: 1.5rem;
     color: purple;
     margin: 0 5px;
+    text-align: center;
 }
 
 .darkNetWiz {
@@ -89,7 +91,7 @@
     .IntroContent {
         height: fit-content;
         width: 100%;
-        margin: 100px 20px;
+        margin: 70px 20px 100px 20px;
     }
 }
 
@@ -106,5 +108,14 @@
 
     .littleIntroTitle {
         font-size: 2rem;
+    }
+
+    .introPara {
+        display: -webkit-box;
+        -webkit-line-clamp: 9;
+        -webkit-box-orient: vertical;
+        line-height: 1.3rem;
+        overflow: hidden;
+        font-size: 15px;
     }
 }

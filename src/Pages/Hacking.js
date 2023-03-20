@@ -8,7 +8,7 @@ import Loading from "../components/OtherCom/Loading";
 const Hacking = ({ darkMode, search }) => {
 	const HACKINGS_QUERY = gql`
 		query HACKINGS_QUERY($searchValue: String!) {
-			hackings(where: { _search: $searchValue }) {
+			hackings(where: { postName_contains: $searchValue }) {
 				id
 				title
 				postName

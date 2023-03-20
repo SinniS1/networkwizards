@@ -1,14 +1,11 @@
 .Footer {
-    /* background-color: rgb(34, 34, 34); */
     background-color: black;
-    width: 100%;
-    height: 360px;
     color: white;
     display: flex;
     flex-direction: column;
     padding: 20px;
+    gap: 20px;
     /* border: 1px solid red; */
-
 }
 
 .footer1 {
@@ -16,17 +13,19 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    gap: 20px;
     /* border: 1px solid red; */
 }
 
 .profiles {
     /* border: 1px solid red; */
-    height: 300px;
+    height: auto;
     width: 550px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    /* margin-right: 50px; */
 }
 
 
@@ -35,9 +34,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    margin-top: 10px;
-    height: 30px;
-    width: 100%;
+    /* margin-top: 10px; */
 }
 
 
@@ -49,7 +46,7 @@
     align-items: center;
     justify-content: center;
     /* border: 1px solid red; */
-
+    /* margin-left: 50px; */
 }
 
 .AboutUs .AboutInfo {
@@ -57,14 +54,11 @@
     height: 80%;
     text-align: justify;
     /* border: 1px solid red; */
-
 }
 
 .line {
-    /* border: 1px solid red; */
-    border-left: 2px solid white;
-    height: 95%;
-    margin: 0 20px;
+    height: 300px;
+    border-right: 2px solid white;
 }
 
 @media screen and (max-width:750px) {
@@ -76,19 +70,27 @@
         display: flex;
         flex-direction: column;
     }
+
+    .line {
+        display: none;
+    }
 }
 
 @media screen and (max-width:580px) {
-    .profiles{
+    .profiles {
         width: auto;
         padding-bottom: 10px;
         height: auto;
     }
-    .AboutUs{
+
+    .AboutUs {
         height: auto;
         width: auto;
     }
-    .footerContent{
-        display: none;
+}
+
+@media screen and (max-width:425px) {
+    .AboutUs {
+        font-size: 12px;
     }
 }
