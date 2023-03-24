@@ -16,11 +16,6 @@
         width: 100%;
         margin: 110px 20px;
     }
-
-    .postPagePara>img {
-        max-width: 100%;
-        height: auto;
-    }
 }
 
 @media screen and (max-width: 425px) {
@@ -31,6 +26,7 @@
     }
 }
 
+/* PostPage pare styling */
 .postPagePara>img {
     max-width: 100%;
     height: auto;
@@ -38,15 +34,22 @@
     margin: 30px auto;
 }
 
-.postPagePara,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.postPagePara>h1,
+.postPagePara>h2,
+.postPagePara>h3,
+.postPagePara>h4,
+.postPagePara>h5,
+.postPagePara>h6 {
     margin-top: 30px;
+}
 
+.postPagePara>ul,
+.postPagePara>ol {
+    margin: 5px 0 0 35px;
+}
+
+.postPagePara>p {
+    margin: 5px 0 0 15px;
 }
 
 .darkPostTitle {
