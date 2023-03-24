@@ -5,10 +5,10 @@ import IntroPage from "../components/IntroPage/IntroPage";
 import ErrorPage from "../components/OtherCom/ErrorPage";
 import Loading from "../components/OtherCom/Loading";
 
-const Coding = ({ darkMode, search}) => {
+const Coding = ({ darkMode, search }) => {
 	const CODINGS_QUERY = gql`
 		query CODINGS_QUERY($searchValue: String!) {
-			codings(where: { _search: $searchValue }) {
+			codings(where: { postName_contains: $searchValue }) {
 				id
 				title
 				postName

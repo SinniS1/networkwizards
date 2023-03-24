@@ -8,7 +8,7 @@ import Loading from "../OtherCom/Loading";
 const ContentPage = ({ darkMode, search }) => {
 	const GET_POSTS = gql`
 		query GET_POSTS($searchValue: String!) {
-			posts(where: { _search: $searchValue }) {
+			posts(where: { postName_contains: $searchValue }) {
 				id
 				title
 				postName
@@ -34,6 +34,9 @@ const ContentPage = ({ darkMode, search }) => {
 	return (
 		<div className={`ContentPage ${darkMode ? "dark" : "light"}`}>
 			<IntroPage darkMode={darkMode} typingEffect={true} />
+			<div className={`trending ${darkMode ? "darkTrending" : ""}`}>
+				<div>Trending Posts</div>
+			</div>
 			<div className="CardSection">
 				{posts
 					? posts.map((card) => (

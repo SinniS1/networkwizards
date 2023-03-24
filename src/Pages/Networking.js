@@ -6,11 +6,11 @@ import ErrorPage from "../components/OtherCom/ErrorPage";
 import Loading from "../components/OtherCom/Loading";
 
 const Networking = ({ darkMode, search }) => {
+	// For searching only in the post name
 	const NETWORKING_QUERY = gql`
 		query NETWORKING_QUERY($searchValue: String!) {
-			networkings(where: { _search: $searchValue }) {
+			networkings(where: { postName_contains: $searchValue }) {
 				id
-				title
 				postName
 				postDescription
 			}
