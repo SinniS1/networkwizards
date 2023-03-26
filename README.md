@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# NetworkWizards
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Purpose
 
-## Available Scripts
+[Networkwizars](https://networkwizards.tech) is an blogging website that is designed to provide its users with a range of content on four different sections: Trending, Coding, Hacking, and Networking. \
+Each section is dedicated to a specific topic, and users can browse through the content to find articles, tutorials, and other resources related to each topic.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Sections
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The website is divided into four main sections:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Trending
 
-### `npm test`
+> The Trending page is designed to showcase the most popular topics at the moment.\
+> This page is updated regularly to ensure that users have access to the most relevant and up-to-date content.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Coding
 
-### `npm run build`
+> The Coding section is dedicated to programming and software development topics.\
+> Here, users can find articles, tutorials, and other resources related to different programming languages, software tools, and frameworks.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Hacking
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+> The Hacking section is focused on cybersecurity and ethical hacking topics.\
+> Users can find articles and tutorials related to penetration testing, vulnerability assessment, and other security-related topics.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Networking
 
-### `npm run eject`
+> The Networking section is dedicated to networking and telecommunications topics.\
+> Users can find articles and tutorials related to network architecture, protocols, and other networking-related topics.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Features
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The website includes the following features:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Dark mode and light mode toggle:
 
-## Learn More
+> One of the key features of the website is the Darkmode and lightmode toggle feature.\
+> This feature allows users to switch between light and dark themes, depending on their preference.\
+> This feature can be especially useful for users who prefer a darker interface, as it can reduce eye strain and make the website easier to use in low-light conditions.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Search bar
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+> Another useful feature of the website is the Search bar.\
+> This feature allows users to search for specific posts, keywords, or topics within the website. This feature can be especially useful for users who are looking for specific information or who want to explore a particular topic in more depth.
 
-### Code Splitting
+### Cards
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+> - Each section page on networkwizards includes cards that display the title and a brief description of the blog post.
+> - The cards help the users to quickly scan through the available content and identify which posts may be most relevant to their interests.
+> - The cards are designed to be visually appealing and easy to read, with a clean layout that emphasizes the title and description of each post.
+> - Users can click on any card to view the full blog post and read more about the topic.
+> - In trending page every card also have a tag which shows that the particular card is fall under which category and if user click on that that they will reach to that section page.
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+# Developers
 
-### Making a Progressive Web App
+## [SinniS](https://github.com/SinniS1) is a webdeveloper of this website. Created this website using React for fronted and for backend uses Hygraph as a CMS technologies.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## [Rajvinder](https://github.com/sudouserraj) is a content writer. He ensures that posts or blogs are up-to-dated and easy to digest for beginners.
