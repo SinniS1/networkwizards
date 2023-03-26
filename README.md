@@ -2,7 +2,7 @@
 
 ## Purpose
 
-[Networkwizars](https://networkwizards.tech) is an blogging website that is designed to provide its users with a range of content on four different sections: Trending, Coding, Hacking, and Networking. \
+[Networkwizards](https://networkwizards.tech) is an blogging website that is designed to provide its users with a range of content on four different sections: Trending, Coding, Hacking, and Networking. \
 Each section is dedicated to a specific topic, and users can browse through the content to find articles, tutorials, and other resources related to each topic.
 
 ---
