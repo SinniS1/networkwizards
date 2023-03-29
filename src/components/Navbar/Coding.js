@@ -5,11 +5,10 @@ import IntroPage from "../components/IntroPage/IntroPage";
 import ErrorPage from "../components/OtherCom/ErrorPage";
 import Loading from "../components/OtherCom/Loading";
 
-const Networking = ({ darkMode, search }) => {
-	// For searching only in the post name
-	const NETWORKING_QUERY = gql`
-		query NETWORKING_QUERY($searchValue: String!) {
-			networkings(where: { postName_contains: $searchValue }) {
+const Coding = ({ darkMode, search }) => {
+	const CODINGS_QUERY = gql`
+		query CODINGS_QUERY($searchValue: String!) {
+			codings(where: { postName_contains: $searchValue }) {
 				id
 				title
 				postName
@@ -17,8 +16,7 @@ const Networking = ({ darkMode, search }) => {
 			}
 		}
 	`;
-
-	const { loading, error, data } = useQuery(NETWORKING_QUERY, {
+	const { loading, error, data } = useQuery(CODINGS_QUERY, {
 		variables: { searchValue: search },
 	});
 
@@ -28,17 +26,17 @@ const Networking = ({ darkMode, search }) => {
 	if (error) {
 		return <ErrorPage error={error} />;
 	}
-	const { networkings } = data;
+	const { codings } = data;
 	return (
 		<div className={`ContentPage ${darkMode ? "dark" : "light"}`}>
-			<IntroPage darkMode={darkMode} typingEffect={false} PageName={"Networking"} />
+			<IntroPage darkMode={darkMode} typingEffect={false} PageName={"Coding"} />
 			<div className="CardSection">
-				{networkings &&
-					networkings.map((card) => (
+				{codings &&
+					codings.map((card) => (
 						<Cards
 							key={card.id}
 							cardID={card.title}
-							page={"networking"}
+							page={"coding"}
 							darkMode={darkMode}
 							title={card.postName}
 							content={<p dangerouslySetInnerHTML={{ __html: card.postDescription }} />}
@@ -50,4 +48,4 @@ const Networking = ({ darkMode, search }) => {
 	);
 };
 
-export default Networking;
+export default Coding;
