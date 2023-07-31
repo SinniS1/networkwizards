@@ -1,0 +1,63 @@
+.footer1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.darkMode {
+  color: white;
+}
+
+.lightMode {
+  color: black;
+}
+
+.profiles {
+  margin-bottom: 8vw;
+  /* border: 1px solid red; */
+  height: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 5vw;
+}
+
+@media screen and (max-width: 750px) {
+  .profiles {
+    flex-direction: column;
+    margin-bottom: 20vw;
+    gap: 10vw;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .profiles {
+    margin-bottom: 25vw;
+    gap: 20vw;
+  }
+}
+
+/* .AboutUs {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid red;
+  margin-left: 50px;
+} */
+
+/* .AboutUs .heading {
+  font-size: 2rem;
+  font-weight: bold;
+} */
+
+/* .AboutUs .AboutInfo {
+  margin-top: 20px;
+  height: 80%;
+  text-align: justify;
+  border: 1px solid red;
+} */

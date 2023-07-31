@@ -1,96 +1,31 @@
 .Footer {
-    background-color: black;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    gap: 20px;
-    /* border: 1px solid red; */
+  position: absolute;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 60px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.darkFooter {
+  background-color: transparent;
+}
+.lightFooter {
+  background-color: transparent;
 }
 
-.footer1 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+.link {
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+
+@media screen and (max-width: 425px) {
+  .Footer {
+    flex-direction: column;
     justify-content: space-between;
-    gap: 20px;
-    /* border: 1px solid red; */
-}
-
-.profiles {
-    /* border: 1px solid red; */
-    height: auto;
-    width: 550px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    /* margin-right: 50px; */
-}
-
-
-.footerContent {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    /* margin-top: 10px; */
-}
-
-
-.AboutUs {
-    width: 550px;
-    height: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    /* border: 1px solid red; */
-    /* margin-left: 50px; */
-}
-
-.AboutUs .AboutInfo {
-    margin-top: 20px;
-    height: 80%;
-    text-align: justify;
-    /* border: 1px solid red; */
-}
-
-.line {
-    height: 300px;
-    border-right: 2px solid white;
-}
-
-@media screen and (max-width:750px) {
-    .Footer {
-        height: fit-content;
-    }
-
-    .footer1 {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .line {
-        display: none;
-    }
-}
-
-@media screen and (max-width:580px) {
-    .profiles {
-        width: auto;
-        padding-bottom: 10px;
-        height: auto;
-    }
-
-    .AboutUs {
-        height: auto;
-        width: auto;
-    }
-}
-
-@media screen and (max-width:425px) {
-    .AboutUs {
-        font-size: 12px;
-    }
+    height: 70px;
+  }
 }

@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 /* app */
@@ -15,6 +15,7 @@
   width: 100%;
   overflow: hidden;
   -webkit-tap-highlight-color: transparent;
+  position: relative;
 }
 
 /* ContentPage */
@@ -30,7 +31,12 @@
 }
 
 .light {
-  background-image: linear-gradient(-225deg, #5271C4 0%, #B19FFF 48%, #ECA1FE 100%);
+  background-image: linear-gradient(
+    -225deg,
+    #5271c4 0%,
+    #b19fff 48%,
+    #eca1fe 100%
+  );
 }
 
 *::-webkit-scrollbar {
@@ -47,21 +53,20 @@
   column-gap: 40px;
 }
 
-@media screen and (max-width:1260px) {
+@media screen and (max-width: 1260px) {
   .ContentPage .CardSection {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media screen and (max-width:850px) {
+@media screen and (max-width: 850px) {
   .ContentPage .CardSection {
     grid-template-columns: repeat(1, 1fr);
   }
-
 }
 
 .space {
-  height: 50px;
+  height: 100px;
   width: 100%;
 }
 
@@ -78,4 +83,10 @@
 
 .darkTrending {
   color: #6f2ab9;
+}
+
+/* Developers page */
+
+.Developers {
+  min-height: 100vh;
 }

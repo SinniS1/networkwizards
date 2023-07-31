@@ -6,6 +6,7 @@ import Coding from "./Pages/Coding";
 import Hacking from "./Pages/Hacking";
 import Networking from "./Pages/Networking";
 import PostPage from "./Pages/PostPage";
+import Developers from "./Pages/Developers";
 
 function App() {
 	const [darkMode, setDarkMode] = useState(true);
@@ -30,6 +31,8 @@ function App() {
 				<Route path="/Coding" element={<Coding darkMode={darkMode} search={search} />} />
 				<Route path="/Hacking" element={<Hacking darkMode={darkMode} search={search} />} />
 				<Route path="/Networking" element={<Networking darkMode={darkMode} search={search} />} />
+				{/* Developers page add here */}
+				<Route path="/Developers" element={<Developers darkMode={darkMode} />} />
 				<Route path={`/PostPage/:page/:cardID/`} element={<PostPage darkMode={darkMode} />} />
 			</Route>
 		</Routes>

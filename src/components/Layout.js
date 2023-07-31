@@ -8,7 +8,7 @@ const Layout = ({ darkMode, toggleDarkMode, SearchValue }) => {
         <div className="App">
             <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} SearchValue={SearchValue} />
             <Outlet />
-            <Footer />
+            <Footer darkMode={darkMode} />
         </div>
     )
 }
